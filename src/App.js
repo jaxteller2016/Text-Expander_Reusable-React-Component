@@ -5,7 +5,6 @@ export default function App() {
   return (
     <div>
       <TextExpander
-        collapsedNumWords={10}
         expandButtonText='Show more'
         collapseButtonText='Show less'
         buttonColor='#2552ce'
@@ -33,7 +32,6 @@ export default function App() {
       <TextExpander
         expanded={true}
         className='box'
-        //collapsedNumWords={10}
         expandButtonText='Show more'
         collapseButtonText='Show less'
         buttonColor='#2552ce'
@@ -95,12 +93,9 @@ function TextExpander({
           )}
 
           {shouldShowCollapseButton && (
-            <>
-              <span> </span>
-              <button onClick={toggleExpansion} style={buttonStyle}>
-                {collapseButtonText}
-              </button>
-            </>
+            <button onClick={toggleExpansion} style={buttonStyle}>
+              {collapseButtonText}
+            </button>
           )}
         </span>
       </p>
